@@ -1,6 +1,7 @@
 <template>
-  <img id="#app">
-  <User />
+  <div id="#app">
+    <User />
+  </div>
 </template>
 
 <script>
