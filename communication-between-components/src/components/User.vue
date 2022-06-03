@@ -4,9 +4,13 @@
     <p>
       User name is <strong>{{ name }}</strong>
     </p>
-    <Button label="Change name" @click="changeName"/>
+    <Button label="Change name" @click="changeName" />
     <div class="children">
-      <UserInfo :name="name" :restartName="restartName"/>
+      <UserInfo
+        :name="name"
+        :restartNameCallback="restartName"
+        @restart-name="name = $event"
+      />
       <UserEdit />
     </div>
   </div>
@@ -25,12 +29,12 @@ export default {
     };
   },
   methods: {
-      changeName(){
-        this.name = 'Francisco'
-      },
-    restartName(){
-        this.name = 'Júnior'
-    }
-  }
+    changeName() {
+      this.name = "Francisco";
+    },
+    restartName() {
+      this.name = "Júnior";
+    },
+  },
 };
 </script>
