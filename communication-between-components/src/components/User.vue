@@ -5,7 +5,7 @@
       User name is <strong>{{ name }}</strong>
     </p>
     <div class="children">
-      <UserInfo />
+      <UserInfo :name="name"/>
       <UserEdit />
     </div>
   </div>
