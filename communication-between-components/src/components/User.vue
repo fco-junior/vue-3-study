@@ -4,6 +4,7 @@
     <p>
       User name is <strong>{{ name }}</strong>
     </p>
+    <Button label="Change name" @click="changeName"/>
     <div class="children">
       <UserInfo :name="name"/>
       <UserEdit />
@@ -23,5 +24,10 @@ export default {
       name: "Júnior",
     };
   },
+  methods: {
+      changeName(){
+        this.name = 'Francisco'
+      }
+  }
 };
 </script>
