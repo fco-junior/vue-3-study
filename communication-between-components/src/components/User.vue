@@ -1,17 +1,16 @@
 <template>
   <div class="user">
     <h1>User Component</h1>
-    <p>
-      User name is <strong>{{ name }}</strong>
-    </p>
+    <p>User name is <strong>{{ name }}</strong></p>
+    <p>User age is <strong>{{ age }}</strong></p>
     <Button label="Change name" @click="changeName" />
     <div class="children">
       <UserInfo
         :name="name"
-        :restartNameCallback="restartName"
-        @restart-name="name = $event"
+        :restartName="restartName"
+        :age="age"
       />
-      <UserEdit />
+      <UserEdit :age="age" @change-age="age = $event"/>
     </div>
   </div>
 </template>
@@ -26,6 +25,7 @@ export default {
   data() {
     return {
       name: "Júnior",
+      age: 21
     };
   },
   methods: {

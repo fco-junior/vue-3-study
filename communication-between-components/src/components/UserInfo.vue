@@ -1,9 +1,9 @@
 <template>
   <div class="user-info">
     <h2>User infos</h2>
-    <p>User name is {{ name }}</p>
-    <Button label="Restart name Callback" @click="restartNameCallback" />
-    <Button label="Restart name Emit" @click="restartName" />
+    <p>User name is <strong>{{ name }}</strong></p>
+    <p>User age is <strong>{{ age }}</strong></p>
+    <Button label="Restart name" @click="restartName" />
   </div>
 </template>
 
@@ -14,14 +14,13 @@ export default {
       type: String,
       default: "unknown",
     },
-    restartNameCallback: {
+    restartName: {
         type: Function
+    },
+    age: {
+        type: Number,
+        default: 0
     }
-  }
-  ,methods :{
-      restartName(){
-          this.$emit('restart-name', "Francisco")
-      }
   }
 };
 </script>
