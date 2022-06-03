@@ -6,7 +6,7 @@
     </p>
     <Button label="Change name" @click="changeName"/>
     <div class="children">
-      <UserInfo :name="name"/>
+      <UserInfo :name="name" :restartName="restartName"/>
       <UserEdit />
     </div>
   </div>
@@ -27,7 +27,10 @@ export default {
   methods: {
       changeName(){
         this.name = 'Francisco'
-      }
+      },
+    restartName(){
+        this.name = 'Júnior'
+    }
   }
 };
 </script>
