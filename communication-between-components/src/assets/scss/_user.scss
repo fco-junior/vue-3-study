@@ -1,0 +1,17 @@
+.user {
+    background-color: #27363b;
+    color: #fff;
+    padding: 10px;
+  }
+  
+  .user hr {
+    margin: 20px 10px;
+  }
+  
+  .children {
+    display: flex;
+  }
+  
+  .children > * {
+    margin: 10px;
+  }

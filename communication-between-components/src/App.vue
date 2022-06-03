@@ -1,11 +1,13 @@
 <template>
   <img id="#app">
-  <h1>Welcome to Your Vue.js App</h1>
+  <User />
 </template>
 
 <script>
-
+import User from './components/User.vue'
+import './assets/scss/_app.scss'
 export default {
   name: 'App',
+  components: { User }
 }
 </script>
