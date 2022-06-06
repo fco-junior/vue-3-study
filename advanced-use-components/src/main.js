@@ -3,7 +3,9 @@ import App from './App.vue';
 import PrimeVue from 'primevue/config';
 import Button from "primevue/button";
 import Card from "primevue/card";
-import './assets/scss/_layout.scss'
+
+import 'primevue/resources/themes/saga-blue/theme.css';
+import './assets/scss/_layout.scss';
 
 const app = createApp(App);
 

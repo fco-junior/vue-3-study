@@ -1,6 +1,16 @@
 <template>
   <div class="quote">
-    <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur voluptas dicta at ipsam odit rem nesciunt fugiat explicabo modi in quaerat velit a, quisquam inventore libero fuga architecto reiciendis? Quis?</h1>
+    <Card class="card">
+      <template #title>
+        <slot name="author">Author</slot>
+      </template>
+      <template #content>
+        <slot name="text">Text</slot>
+      </template>
+      <template #footer>
+        <slot name="font">Font</slot>
+      </template>
+    </Card>
   </div>
 </template>
 

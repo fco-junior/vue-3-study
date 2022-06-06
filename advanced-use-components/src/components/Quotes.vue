@@ -1,6 +1,18 @@
 <template>
   <div class="quotes">
-    <Quote />
+    <Quote>
+      <template #author>
+        <h1>{{ quotes[index].author }}</h1>
+      </template>
+
+      <template #text>
+        <p>{{ quotes[index].text }}</p>
+      </template>
+
+      <template #font>
+        <h6>{{ quotes[index].font }}</h6>
+      </template>
+    </Quote>
 
     <span>
       <Button label="<" class="p-button-secondary p-button-raised" @click="number--" />
