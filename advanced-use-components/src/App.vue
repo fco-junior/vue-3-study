@@ -8,6 +8,7 @@
 <script>
 import Quotes from "./components/Quotes";
 import About from "./components/About";
+import './assets/scss/_app.scss'
 
 export default {
   name: 'App',
