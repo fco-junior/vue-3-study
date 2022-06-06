@@ -1,13 +1,17 @@
 <template>
   <div id="#app">
-    <h1>Advanced use of components</h1>
+    <Quotes />
+    <About />
   </div>
 </template>
 
 <script>
+import Quotes from "./components/Quotes";
+import About from "./components/About";
 
 export default {
-  name: 'App'
+  name: 'App',
+  components: { Quotes, About }
 }
 </script>
 
