@@ -1,6 +1,7 @@
 <template>
   <div id="#app">
     <h1 v-color="color"> Using Directives </h1>
+    <h1 v-color:background="'red'"> Using Directives and Args </h1>
   </div>
 </template>
 
