@@ -2,6 +2,7 @@ import { createApp } from 'vue';
 import App from './App.vue';
 import PrimeVue from 'primevue/config';
 import router from './router';
+import TabMenu from 'primevue/tabmenu';
 
 import './assets/sass/_layout.scss';
 import 'primevue/resources/themes/saga-blue/theme.css';
@@ -12,5 +13,7 @@ const app = createApp(App);
 
 app.use(PrimeVue);
 app.use(router);
+
+app.component('TabMenu', TabMenu);
 
 app.mount('#app');
