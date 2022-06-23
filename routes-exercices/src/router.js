@@ -1,17 +1,24 @@
 import { createWebHistory, createRouter } from 'vue-router';
-import Home from './components/Home';
-import User from './components/User';
+
+function lazyLoad(page) {
+  return () => import(`./components/${page}.vue`);
+}
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
       path: '/',
-      component: Home
+      component: lazyLoad('Home')
     },
     {
-      path: '/user',
-      component: User
+      path: '/user/:id',
+      component: lazyLoad('User'),
+      props: true
+    },
+    {
+      path: '/:pathMatch(.*)*',
+      redirect: '/'
     }
   ]
 })

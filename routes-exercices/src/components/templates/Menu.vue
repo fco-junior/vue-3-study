@@ -15,8 +15,12 @@ export default {
           to: '/'
         },
         {
-          label: 'User',
-          to: '/user'
+          label: 'User 1',
+          to: '/user/1'
+        },
+        {
+          label: 'User 2',
+          to: '/user/2'
         }
       ]
     }
